@@ -1,5 +1,5 @@
 <?php
-$api_url = "http://api_marketplace.php"; // Replace with your API endpoint
+$api_url = "http://api_marketplace.php";
 $response = file_get_contents($api_url);
 
 if ($response === FALSE) {
