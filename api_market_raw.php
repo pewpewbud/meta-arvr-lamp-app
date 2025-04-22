@@ -55,8 +55,6 @@ $result = $conn->query($sql);
             <td><?= htmlspecialchars($row['description']) ?></td>
             <td><?= htmlspecialchars($row['category']) ?></td>
             <td>$<?= number_format($row['price'], 2) ?></td>
-            <td><?= htmlspecialchars($row['vendor_source']) ?></td>
-            <td><?= htmlspecialchars($row['added_at']) ?></td>
         </tr>
         <?php endwhile; ?>
     </table>
