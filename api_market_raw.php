@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-$host = "172.31.84.141"; // Private IP of DB server
+$host = "172.31.84.141";
 $user = "apiuser";
 $pass = "1234";
 $dbname = "ar_vr_app_data";
