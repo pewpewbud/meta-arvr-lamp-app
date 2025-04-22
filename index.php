@@ -1,18 +1,30 @@
-<!DOCTYPE html>
+<?php
+$api_url = "http://54.165.162.68/api_market_raw.php";
+$response = file_get_contents($api_url);
+
+echo "<!DOCTYPE html>
 <html>
-<head><title>Meta Marketplace Frontend</title></head>
-<body>
-    <h1>Meta AR/VR Marketplace Interface</h1>
+<head>
+    <title>Marketplace Data</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin-top: 40px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>";
 
-    <!-- Button 1: Launch HTML data view from Server 2 -->
-    <form action="http://52.90.200.198/api_market_raw.php" method="get" target="_blank">
-        <button type="submit">View Marketplace Items (HTML)</button>
-    </form>
+echo "<h1>Meta Marketplace</h1>";
 
-    <!-- Button 2: Launch raw API view from Server 2 -->
-    <form action="http://52.90.200.198/api_marketplace.php" method="get" target="_blank">
-        <button type="submit">View Marketplace API (JSON)</button>
-    </form>
-</body>
-</html>
+if ($response === FALSE) {
+    echo "Failed to retrieve data.";
+} else {
+    echo $response;
+}
 
+echo "</body></html>";
+?>
