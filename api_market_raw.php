@@ -45,8 +45,6 @@ $result = $conn->query($sql);
             <th>Description</th>
             <th>Category</th>
             <th>Price</th>
-            <th>Vendor</th>
-            <th>Added At</th>
         </tr>
         <?php while ($row = $result->fetch_assoc()): ?>
         <tr>
